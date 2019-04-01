@@ -1,6 +1,5 @@
 <?php
 
-
 if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.php' ) ) {
   // file does not exist... return an error.
   return new WP_Error( 'class-wp-bootstrap-navwalker-missing', __( 'It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'wp-bootstrap-navwalker' ) );
@@ -9,18 +8,25 @@ if ( ! file_exists( get_template_directory() . '/class-wp-bootstrap-navwalker.ph
   require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
 }
 
-register_nav_menus( array(
-  'primary' => __( 'Primary Menu')
-) );
-
-
 //省略表示の長さ
 function twpp_change_excerpt_length( $length ) {
   return 100;
 }
-//サムネイル
+
+
 function twpp_setup_theme() {
+//サムネイル
   add_theme_support( 'post-thumbnails' );
+
+
+//  ナヴィゲーション
+  register_nav_menus( array(
+    'primary' => __( 'Primary Menu')
+  ) );
+
+//投稿フォーマット
+  add_theme_support("post-formats",array("aside","gallery"));
+
 }
 add_action( 'after_setup_theme', 'twpp_setup_theme' );
 
@@ -43,9 +49,11 @@ function wpb_init_widgets($id){
     "id"=> "sidebar",
     "before_widget"=> "<div class='sidebar-module'>",
     "after_widget"=> "</div>",
-    "before_title"=>"<h4>",
-    "after_title"=>"</h4>"
+    "before_title"=>"<h3 class='sidebar-header'>",
+    "after_title"=>"</h3>"
   ));
 }
 
 add_action("widgets_init","wpb_init_widgets");
+
+
