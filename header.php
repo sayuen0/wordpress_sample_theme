@@ -34,43 +34,42 @@
     }
   }
   </style>
-
   <?php wp_head(); ?>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
 
-
-    <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
+<!--    ナビバー本体-->
+    <nav class="navbar navbar-expand-md navbar-light " role="navigation">
+        <!-- トグルボタン-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+      <div class="container">
         <?php
-      wp_nav_menu(array(
-        'theme_location'    => 'primary',
-        'depth'             => 2,
-        'container'         => 'div',
-        'container_class'   => 'collapse navbar-collapse',
-        'container_id'      => 'bs-example-navbar-collapse-1',
-        'menu_class'        => 'nav navbar-nav',
-        'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-        'walker'            => new WP_Bootstrap_Navwalker(),
-      ));
-      ?>
+        wp_nav_menu(array(
+          'theme_location'    => 'primary',
+          'depth'             => 2,
+          'container'         => 'div',
+          'container_class'   => 'collapse navbar-collapse',
+          'container_id'      => 'bs-example-navbar-collapse-1',
+          'menu_class'        => 'nav navbar-nav',
+          'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+          'walker'            => new WP_Bootstrap_Navwalker(),
+        ));
+        ?>
+
       </div>
     </nav>
 
 <!--    ジャンボトロン-->
-    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-      <div class="col-md-6 px-0">
-        <h1 class="display-4 font-italic"><?php bloginfo("description") ?>
-        </h1>
-        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently
-          about what’s most interesting in this post’s contents.</p>
-        <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-      </div>
-    </div>
+<!--    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">-->
+<!--      <div class="col-md-6 px-0">-->
+<!--        <h1 class="display-4 font-italic">--><?php //bloginfo("description") ?>
+<!--        </h1>-->
+<!--        <p class="lead my-3">ちょっと待ってちょっと待ってお兄さん</p>-->
+<!--        <p class="lead mb-0"><a href="--><?php //the_permalink(); ?><!--" class="text-white font-weight-bold">Continue reading...</a></p>-->
+<!--      </div>-->
+<!--    </div>-->

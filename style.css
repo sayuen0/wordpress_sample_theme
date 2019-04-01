@@ -234,12 +234,25 @@ list-style:none;
 
 /* サイドバー */
 
+/*サイドバーコンテンツ*/
 .sidebar-header {
   border-bottom: 2px solid black;
   font-size: 1.2;
   text-align: center;
 }
 
+/*サイドバー本体*/
+
+
+.blog-sidebar ul{
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.blog-sidebar p{
+  text-align: center;
+}
 
 /*ギャラリーページ*/
 
@@ -253,4 +266,20 @@ list-style:none;
 
 .post-gallery h2{
   color: #fff;
+}
+
+
+/*その他機能*/
+
+
+/*ページスクロール*/
+
+.fadein {
+  opacity : 0;
+  transform : translate(0, 50px);
+  transition : all 300ms;
+}
+.fadein.scrollin {
+  opacity : 1;
+  transform : translate(0, 0);
 }
