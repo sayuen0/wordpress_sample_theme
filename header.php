@@ -36,10 +36,11 @@
     }
   }
   </style>
-  <?php wp_head(); ?>
 </head>
 
 <body>
+<?php wp_head(); ?>
+
   <div class="container-fluid">
 
 
@@ -48,7 +49,7 @@
         <?php bloginfo( 'name' ) ?>
       </a></h1>
 
-    <nav class="navbar navbar-expand-md sticky-top navbar-light shadow-sm mb-5 " role="navigation">
+    <nav class="navbar navbar-expand-md sticky-top  shadow-sm mb-5 " role="navigation">
 
       <!--      ページタイトル-->
 

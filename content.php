@@ -1,9 +1,11 @@
 <div class="blog-post shadow-lg border-success p-5">
   <a href="<?php the_permalink(); ?>">
     <h2 class="blog-post-title">
-      <?php if(is_single()): ?>
+<!--      ページ詳細ならリンクにしない-->
+      <?php if(is_single() || is_page()): ?>
         <?php the_title(); ?>
       <?php else: ?>
+<!--      一覧ならリンクに-->
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 
       <?php  endif; ?>
@@ -20,6 +22,7 @@
 <!--  カテゴリー-->
   <?php get_the_category(); ?>
 
+
 <!--  サムネイル-->
   <?php if (has_post_thumbnail()): ?>
     <div class="post-thumb">
@@ -28,20 +31,21 @@
 
   <?php endif; ?>
 
+
 <!--  投稿か固定ページなら-->
   <?php if(is_single() || is_page())  :?>
-    <!--          本文全部-->
 
+    <!--          本文全部-->
     <?php the_content() ;?>
 <!--  それ以外：一覧などなら-->
   <?php else: ?>
     <!--          代わりに短く-->
-
     <?php the_excerpt(); ?>
   <?php endif; ?>
 
-  <?php if(is_single()): ?>
-  <?php comment_template(); ?>
+  <?php if(is_single() || is_page()): ?>
+<!--コメント欄-->
+    <?php comments_template(); ?>
   <?php endif; ?>
 
 </div><!-- /.blog-post -->

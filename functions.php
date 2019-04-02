@@ -19,7 +19,7 @@ function twpp_setup_theme() {
   add_theme_support( 'post-thumbnails' );
 
 
-//  ナヴィゲーション
+//  ナビゲーション
   register_nav_menus( array(
     'primary' => __( 'Primary Menu')
   ) );
