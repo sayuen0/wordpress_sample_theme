@@ -44,12 +44,13 @@
 
 
 <!--    ナビバー本体-->
+    <h1 id="page-title" class="blog-title text-center"><a  class="p-5 d-block" href="<?php echo home_url() ?>">
+        <?php bloginfo( 'name' ) ?>
+      </a></h1>
+
     <nav class="navbar navbar-expand-md sticky-top navbar-light shadow-sm mb-5 " role="navigation">
 
       <!--      ページタイトル-->
-        <h1 id="page-title" class="text-center"><a href="<?php echo home_url() ?>">
-            <?php bloginfo( 'name' ) ?>
-          </a></h1>
 
 
       <!-- トグルボタン-->
