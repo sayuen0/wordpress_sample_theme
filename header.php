@@ -13,6 +13,8 @@
   </title>
   <!-- Bootstrap Core CSS -->
   <link href="<?php bloginfo('template_url');?>/css/bootstrap.css" rel="stylesheet">
+<!--  Bootswatch Minty-->
+  <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/css/bootswatch_minty.css">
   <!-- My own Stylesheet -->
   <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>">
 
@@ -40,9 +42,17 @@
 <body>
   <div class="container-fluid">
 
+
 <!--    ナビバー本体-->
-    <nav class="navbar navbar-expand-md navbar-light " role="navigation">
-        <!-- トグルボタン-->
+    <nav class="navbar navbar-expand-md sticky-top navbar-light shadow-sm mb-5 " role="navigation">
+
+      <!--      ページタイトル-->
+        <h1 id="page-title" class="text-center"><a href="<?php echo home_url() ?>">
+            <?php bloginfo( 'name' ) ?>
+          </a></h1>
+
+
+      <!-- トグルボタン-->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -53,7 +63,7 @@
           'theme_location'    => 'primary',
           'depth'             => 2,
           'container'         => 'div',
-          'container_class'   => 'collapse navbar-collapse',
+          'container_class'   => 'collapse navbar-collapse navbar-brand',
           'container_id'      => 'bs-example-navbar-collapse-1',
           'menu_class'        => 'nav navbar-nav',
           'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
@@ -61,15 +71,6 @@
         ));
         ?>
 
+        <?php  get_search_form(); ?>
       </div>
     </nav>
-
-<!--    ジャンボトロン-->
-<!--    <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">-->
-<!--      <div class="col-md-6 px-0">-->
-<!--        <h1 class="display-4 font-italic">--><?php //bloginfo("description") ?>
-<!--        </h1>-->
-<!--        <p class="lead my-3">ちょっと待ってちょっと待ってお兄さん</p>-->
-<!--        <p class="lead mb-0"><a href="--><?php //the_permalink(); ?><!--" class="text-white font-weight-bold">Continue reading...</a></p>-->
-<!--      </div>-->
-<!--    </div>-->

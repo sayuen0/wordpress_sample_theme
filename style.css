@@ -115,25 +115,49 @@ h6 {
   }
 }
 
-/* Pagination */
+/* ページネーション */
 .blog-pagination {
   margin-bottom: 4rem;
 }
 
-.blog-pagination > .btn {
-  border-radius: 2rem;
+.pagination{
+  justify-content: center;
+
+}
+
+.blog-pagination span{
+  font-size: 1.4em;
+  line-height: 100%;
+}
+
+.blog-pagination a{
+  display: inline-block; !important;
+  vertical-align: middle;
+  font-size: 1.4em;
+  border-radius: 10px;
+  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+
 }
 
 /*
- * Blog posts
+ * コンテンツ blog-posts
  */
 .blog-post {
   margin-bottom: 4rem;
+  border:2px solid coral;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  border-radius: 40px;
+
 }
 
 .blog-post-title {
   margin-bottom: 0.25rem;
+  margin-left: .5em;
   font-size: 2.5rem;
+
 }
 
 
@@ -254,6 +278,16 @@ list-style:none;
   text-align: center;
 }
 
+/*プロフィール画像*/
+
+.profile-image{
+  width: 80%;
+}
+
+.profile-author{
+  text-align: center;
+}
+
 /*ギャラリーページ*/
 
 
@@ -283,3 +317,26 @@ list-style:none;
   opacity : 1;
   transform : translate(0, 0);
 }
+
+
+/*ナビゲーション*/
+
+#page-title a, #page-title:hover a{
+
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  transition: all 0.4s;
+  background: coral;
+  height: 100%;
+}
+
+
+
+.nav-link:hover {
+  color: #fff; !important;
+
+}
+
+
