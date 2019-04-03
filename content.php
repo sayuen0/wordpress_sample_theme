@@ -1,4 +1,5 @@
-<div class="blog-post shadow-lg border-success p-5">
+<div class="blog-post shadow-lg border-success p-5 bg-white
+<?php if(!is_single() && !is_page()): echo "fadein"; endif;?>"> <!-- 一覧のときにfadein-->
   <a href="<?php the_permalink(); ?>">
     <h2 class="blog-post-title">
 <!--      ページ詳細ならリンクにしない-->
@@ -37,6 +38,11 @@
 
     <!--          本文全部-->
     <?php the_content() ;?>
+
+    <!--  シェアボタン-->
+    <?php get_template_part("share") ?>
+
+
 <!--  それ以外：一覧などなら-->
   <?php else: ?>
     <!--          代わりに短く-->

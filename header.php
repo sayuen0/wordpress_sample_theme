@@ -14,9 +14,11 @@
   <!-- Bootstrap Core CSS -->
   <link href="<?php bloginfo('template_url');?>/css/bootstrap.css" rel="stylesheet">
 <!--  Bootswatch Minty-->
-  <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/css/bootswatch_minty.css">
+<!--  <link rel="stylesheet" href="--><?php //bloginfo("template_url"); ?><!--/css/bootswatch_minty.css">-->
   <!-- My own Stylesheet -->
-  <link rel="stylesheet" href="<?php bloginfo("stylesheet_url"); ?>">
+  <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/css/style.css">
+<!--  font awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
 
@@ -45,17 +47,16 @@
 
 
 <!--    ナビバー本体-->
-    <h1 id="page-title" class="blog-title text-center"><a  class="p-5 d-block" href="<?php echo home_url() ?>">
+    <h1 id="page-title" class="blog-title text-center bg-white"><a  class="p-5 d-block" href="<?php echo home_url() ?>">
         <?php bloginfo( 'name' ) ?>
       </a></h1>
 
-    <nav class="navbar navbar-expand-md sticky-top  shadow-sm mb-5 " role="navigation">
+    <nav class="navbar navbar-expand-md sticky-top  navbar-light shadow-sm mb-5 " role="navigation">
 
       <!--      ページタイトル-->
 
-
       <!-- トグルボタン-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
           aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

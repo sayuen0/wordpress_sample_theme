@@ -1,15 +1,11 @@
 <?php  get_header(); ?>
 
-
-
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-8 blog-main">
       <h2>
-        記事一覧
+        投稿一覧
       </h2>
-
-
 
       <!--メインループ-->
       <?php if (have_posts()): ?>

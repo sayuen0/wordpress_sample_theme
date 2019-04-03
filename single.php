@@ -13,7 +13,6 @@
         <?php endwhile; ?>
 
 
-
       <?php else: ?>
         <p><?php __("NO Posts found"); ?>
         </p>
