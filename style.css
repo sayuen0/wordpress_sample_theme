@@ -57,7 +57,7 @@ ul{
 
 
 body{
-  background-image: url("../img/showcase.jpg");
+  background-image: url("img/showcase.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
@@ -190,7 +190,7 @@ body{
   border-bottom: 1px solid #ccc;
   margin-bottom: 30px;
   color: #fff;
-  background: url(../img/showcase.jpg) center center;
+  background: url(img/showcase.jpg) center center;
   background-size: cover;
 }
 

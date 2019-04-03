@@ -16,8 +16,8 @@
 <!--  Bootswatch Minty-->
 <!--  <link rel="stylesheet" href="--><?php //bloginfo("template_url"); ?><!--/css/bootswatch_minty.css">-->
   <!-- My own Stylesheet -->
-  <link rel="stylesheet" href="<?php bloginfo("template_url"); ?>/css/style.css">
-<!--  font awesome-->
+  <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" />
+  <!--  font awesome-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
